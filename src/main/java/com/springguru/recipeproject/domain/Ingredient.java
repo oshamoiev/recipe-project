@@ -10,9 +10,10 @@ public class Ingredient {
     private Long id;
     String description;
     BigDecimal amount;
-    //    private UnitOfMeasure unitOfMeasure;
     @ManyToOne
     private Recipe recipe;
+    @OneToOne
+    private UnitOfMeasure unitOfMeasure;
 
     public void setId(Long id) {
         this.id = id;
